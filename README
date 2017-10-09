@@ -1,0 +1,54 @@
+-----------------------------------------------------
+INTRODUCTION
+-----------------------------------------------------
+A reliable data transfer
+layer is added to a UDP
+transport layer protocol.
+The following code provides
+a server and client that exercises
+this reliable data transfer
+implementation.
+
+------------------------------------------------------
+COMPILING & RUNNING
+------------------------------------------------------
+Precondition: You are in the
+submission folder.
+
+1. Go to rdtclientserver folder
+   cd rdtclientserver
+
+2. Compile code through make file
+   make
+
+3. Run server
+   ./server localhost 8080
+
+4. Run client on another terminal instance
+   ./client localhost 8080 "hellooooooooooooooooooooooooo thereeeeeeeeeeeeeeeeeee"
+
+
+------------------------------------------------------
+RUNNING TEST CLIENT
+------------------------------------------------------
+Precondition: A server instance is running at localhost 8080
+
+The test client is set up to take in a
+test case parameter to test the different
+cases of packet transfer between client and server.
+
+1. Go to rdtclient_test folder
+   cd rdtclient_test
+
+2. Compile code through make file
+   make
+
+3. Run client
+   ./client localhost 8080 "THISISATEST" "SUCCESS_PKTINORDER"
+
+Below are the possible test cases:
+1. SUCCESS_PKTINORDER
+2. SUCCESS_PKTOUTOFORDER
+3. ERROR_CORRUPTDATA
+4. ERROR_LOSSPKTTORECEIVER
+5. ERROR_MAXTIMEOUTRETRY
